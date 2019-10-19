@@ -7,9 +7,11 @@
         </div>
         <div class="uco-tabs-active-bar"></div>
     </div>
-    <div class='uco-tabs-content'>
+    <div class='uco-tabs-content fadeInRight'>
         <% ids.forEach((item, index) => { %>
-        <div class="uco-tabs-panel <%= selected === index ? 'active' : '' %>" id=<%= item %>></div>
+        <div class="uco-tabs-panel <%= selected === index ? 'active' : '' %>" id=<%= item %>>
+        <%= `This is Panel ${index}` %>
+        </div>
         <%})%>
     </div>
 </div>

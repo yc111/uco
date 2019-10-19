@@ -1,0 +1,153 @@
+@import '../../theme/var.scss';
+
+$primary: #4390f7;
+$danger: #ec5b56;
+$success: #3eaf7c;
+$info: #909399;
+$warning: #e6a23c;
+$text: #333;
+
+$btn-primary-bg-color: $primary;
+$btn-primary-border-color: $primary;
+$btn-primary-font-color: #fff;
+$btn-primary-hover: #40a9ff;
+$btn-primary-active: #096dd9;
+
+$btn-danger-bg-color: $danger;
+$btn-danger-border-color: $danger;
+$btn-danger-font-color: #fff;
+$btn-danger-hover: #ff7875;
+$btn-danger-active: #d9363e;
+
+$btn-success-bg-color: $success;
+$btn-success-border-color: $success;
+$btn-success-font-color: #fff;
+$btn-success-hover: #4abf8a;
+$btn-success-active: #4f9a6c;
+
+$btn-info-bg-color: $info;
+$btn-info-border-color: $info;
+$btn-info-font-color: #fff;
+$btn-info-hover: #a6a9ad;
+$btn-info-active: #82848a;
+
+$btn-warning-bg-color: $warning;
+$btn-warning-border-color: $warning;
+$btn-warning-font-color: #fff;
+$btn-warning-hover: #ebb563;
+$btn-warning-active: #cf9236;
+
+$btn-default-bg-color: #fff;
+$btn-default-border-color: #ccc;
+$btn-default-font-color: #333;
+$btn-default-hover: $btn-primary-hover;
+$btn-default-active: $btn-primary-active;
+
+$btn-link-bg-color: transparent;
+$btn-link-border-color: transparent;
+$btn-link-font-color: #1890ff;
+$btn-link-hover: $btn-primary-hover;
+$btn-link-active: $btn-primary-active;
+
+$border-radius: 4px;
+
+body {
+    background: $bg-color;
+}
+
+.muco-btn {
+    padding: .5rem 1.6rem;
+    font-size: 0.9rem;
+    border-radius: $border-radius;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    cursor: pointer;
+}
+
+.muco-btn {
+    &.default {
+        color: $btn-default-font-color;
+        border: solid 1px $btn-default-border-color;
+        background: $btn-default-bg-color;
+        &:hover {
+            color: $btn-default-hover;
+            border: solid 1px $btn-default-hover;
+        }
+        &:active, &:focus {
+            color: $btn-default-active;
+            border: solid 1px $btn-default-active;
+        }
+    }
+
+    &.primary {
+        color: $btn-primary-font-color;
+        border: $btn-primary-border-color;
+        background: $btn-primary-bg-color;
+        &:hover {
+            background: $btn-primary-hover;
+        }
+        &:active, &:focus {
+            background: $btn-primary-active;
+        }
+    }
+
+    &.danger {
+        color: $btn-danger-font-color;
+        border: $btn-danger-border-color;
+        background: $btn-danger-bg-color;
+        &:hover {
+            background: $btn-danger-hover;
+        }
+        &:active, &:focus {
+            background: $btn-danger-active;
+        }
+    }
+
+    &.success {
+        color: $btn-success-font-color;
+        border: $btn-success-border-color;
+        background: $btn-success-bg-color;
+        &:hover {
+            background: $btn-success-hover;
+        }
+        &:active, &:focus {
+            background: $btn-success-active;
+        }
+    }
+
+    &.info {
+        color: $btn-info-font-color;
+        border: $btn-info-border-color;
+        background: $btn-info-bg-color;
+        &:hover {
+            background: $btn-info-hover;
+        }
+        &:active, &:focus {
+            background: $btn-info-active;
+        }
+    }
+
+    &.warning {
+        color: $btn-warning-font-color;
+        border: $btn-warning-border-color;
+        background: $btn-warning-bg-color;
+        &:hover {
+            background: $btn-warning-hover;
+        }
+        &:active, &:focus {
+            background: $btn-warning-active;
+        }
+    }
+
+    &.link {
+        color: $btn-link-font-color;
+        border: $btn-link-border-color;
+        background: $btn-link-bg-color;
+        &:hover {
+            color: $btn-link-hover;
+        }
+        &:active, &:focus {
+            color: $btn-link-active;
+        }
+    }
+
+}

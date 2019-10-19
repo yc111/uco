@@ -8,12 +8,12 @@ class Tabs {
         }
         this.options = options;
 
-        if(!this.el || el.slice(0,1) !== '#') {
+        if(!this.options.el || this.options.el.slice(0,1) !== '#') {
             throw new Error('need options.el which is a string type and begins with "#"');
         }
         this.el = this.options.el;
 
-        if(!this.list || !Array.isArray(list)) {
+        if(!this.options.list || !Array.isArray(this.options.list)) {
             throw new Error('need options.list whitch is an array type');
         }
         this.list = this.options.list;
@@ -30,12 +30,20 @@ class Tabs {
         };
         this.id = uuidv4();
 
+        let len = this.list.length;
+        this.panelIds = [];
+        for(i = 0; i < len; i++) {
+            this.panelIds.push(uuidv4());
+        }
+        this.activePanelId = this.panelIds[this.selected];
+
         this.init();
     }
 
     render() {
         return require('./tabs.ejs')({
             id: this.id,
+            ids: this.panelIds,
             list: this.list,
             selected: this.selected
         })
@@ -51,8 +59,15 @@ class Tabs {
                 $(e.target).addClass('active');
 
                 this.selected = $(`#${this.id} .uco-tabs-tab`).index(e.target);
+                this.activePanelId = this.panelIds[this.selected];
+                $(`#${this.id} .uco-tabs-panel`).removeClass('active');
+                $(`#${this.activePanelId}`).addClass('active');
+
                 this.events['onchange'].forEach(fn => {
-                    fn(this.selected);
+                    fn({
+                        index: this.selected,
+                        panelId: this.activePanelId
+                    });
                 });
 
                 let activeBarWidth = Math.round($(e.target).outerWidth());

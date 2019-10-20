@@ -32,7 +32,17 @@ a {
         padding: 12px 24px;
         border-bottom: 1px solid #eaecef;
 
+        .sidebar-button {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 18px;
+            background: url(../assets/bars.svg) no-repeat center;
+        }
+
         .site-name {
+            display: none;
             font-size: 24px;
             font-weight: 600;
             color: #2c3e50;

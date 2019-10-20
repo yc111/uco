@@ -31,7 +31,7 @@ let baseConfig = {
                 use: ['ejs-loader']
             },
             {
-                test: /\.(jpe?g|png|bmp|gif)$/,
+                test: /\.(jpe?g|png|bmp|gif|svg)$/,
                 use: [{
                     loader: 'url-loader',
                     options: {

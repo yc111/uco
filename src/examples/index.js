@@ -2,6 +2,10 @@ require('./index.scss');
 require('../../dist/lib/uco.min.css');
 let x = require('../../dist/lib/uco.min.js');
 
+$('#sidebar_button').click(function(e) {
+    $('#sidebar').toggleClass('sidebar-open');
+})
+
 $('#link_list').click(function(e) {
     if(e.target.className === 'sidebar-link') {
         $('.sidebar .sidebar-link').removeClass('active');

@@ -10,8 +10,7 @@ class Demo {
             list: [
                 { text: 'Tab1' },
                 { text: 'Tab2' },
-                { text: 'Tab3' },
-                { text: 'Tab4' },
+                { text: 'Tab3' }
             ]
         })
         tab.onchange(function (data) {

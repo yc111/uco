@@ -158,19 +158,15 @@ a {
 
 
 @media (max-width: 959px) {
-    .theme-container .sidebar {
-        width: 260px;
-    }
-
+    .theme-container .sidebar,
     .theme-container .page {
-        padding-left: 260px;
+        width: 260px;
     }
 
     .theme-container .page-footer,
     .theme-container .page .theme-default-content {
         padding: 32px;
     }
-
 }
 @media (max-width:719px) {
     .theme-container .sidebar {

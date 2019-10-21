@@ -119,6 +119,7 @@ a {
         margin: 0 auto;
         font-size: 0.9rem;
         overflow: auto;
+        padding: 32px 40px;
         padding-top: 1rem;
         padding-bottom: 1rem;
 
@@ -159,6 +160,15 @@ a {
 @media (max-width: 959px) {
     .theme-container .sidebar {
         width: 260px;
+    }
+
+    .theme-container .page {
+        padding-left: 260px;
+    }
+
+    .theme-container .page-footer,
+    .theme-container .page .theme-default-content {
+        padding: 32px;
     }
 
 }

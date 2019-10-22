@@ -4,12 +4,17 @@
   "description": "A linght-weight component lib for web",
   "main": "./dist/lib/uco.min.js",
   "scripts": {
+    "build": "node --inspect-brk=5858 ./node_modules/.bin/webpack --env doc --config webpack.config.js",
     "build:lib": "webpack --env lib --watch",
     "build:doc": "webpack --env doc --mode production",
     "dev:doc": "webpack-dev-server --env doc --mode development",
-    "gen": "node ./example/gen.js"
+    "gen": "node ./src/examples/gen.js"
   },
-  "keywords": ["web", "front-end", "lib", "jquery"],
+  "keywords": [
+    "web",
+    "front-end",
+    "lib"
+  ],
   "author": "champyin",
   "license": "MIT",
   "devDependencies": {
@@ -26,6 +31,8 @@
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.1.3",

@@ -1,5 +1,5 @@
 require('./tabs.scss');
-const uuidv4 = require('uuid');
+const uuidv4 = require('uuid/v4');
 
 class Tabs {
     constructor(options) {

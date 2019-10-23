@@ -1,18 +1,19 @@
 require('./dialog.scss');
+const uuidv4 = require('uuid/v4');
 
 class Dialog {
     constructor(options) {
         this.options = options;
-        this.el = this.options.el;
+        this.id = uuidv4();
         this.init();
     };
     render() {
         return require('./dialog.pug')({
-            name: 'champyin'
+            id: this.id
         });
     };
     init() {
-        $(this.el).html(this.render());
+        $('body').append('<div class="uco-dialog-mask"></div>').append(this.render());
     }
 }
 

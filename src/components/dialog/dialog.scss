@@ -1,0 +1,68 @@
+@import '../../theme/var.scss';
+
+.uco-dialog-mask {
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 8;
+}
+
+.uco-dialog-wrapper {
+    position: fixed;
+    left: 50%;
+    margin-left: -15%;
+    width: 30%;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 5px gray;
+    z-index: 9;
+
+    .uco-dialog-header {
+        position: relative;
+        padding: 10px 20px;
+        // border-bottom: solid 1px #ddd;
+        overflow: hidden;
+        
+        .uco-dialog-title {
+            vertical-align: middle;
+            font-size: 18px;
+            color: #303133;
+        }
+
+        .uco-dialog-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            padding: 15px 20px;
+            background: url(../../assets/close.svg) no-repeat center;
+            cursor: pointer;
+        }
+    }
+
+    .uco-dialog-content {
+        padding: 20px;
+        
+        .content-text {
+            font-size: 14px;
+            color: #606266;
+            word-break: break-all;
+        }
+    }
+
+    .uco-dialog-footer {
+        text-align: right;
+        line-height: 40px;
+        // border-top: solid 1px #ddd;
+        padding: 10px 20px;
+
+        .uco-btn {
+            margin-left: 10px;
+        }
+    }
+}
+

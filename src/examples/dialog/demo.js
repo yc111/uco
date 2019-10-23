@@ -9,8 +9,9 @@ class Demo {
     }
 
     init() {
-        new Dialog({
-            el: '#show_dialog'
+        $('#show_dialog').click(function() {
+            new Dialog({
+            })
         })
     }
 }

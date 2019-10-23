@@ -1,12 +1,5 @@
 @import '../../theme/var.scss';
 
-$primary: #4390f7;
-$danger: #ec5b56;
-$success: #3eaf7c;
-$info: #909399;
-$warning: #e6a23c;
-$text: #333;
-
 $btn-primary-bg-color: $primary;
 $btn-primary-border-color: $primary;
 $btn-primary-font-color: #fff;
@@ -51,12 +44,9 @@ $btn-link-active: $btn-primary-active;
 
 $border-radius: 4px;
 
-body {
-    background: $bg-color;
-}
-
 .uco-btn {
     padding: .4rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     font-size: 0.9rem;
     border-radius: $border-radius;
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
@@ -68,11 +58,11 @@ body {
         color: $btn-default-font-color;
         border: solid 1px $btn-default-border-color;
         background: $btn-default-bg-color;
-        &:hover {
+        &:hover, &:focus {
             color: $btn-default-hover;
             border: solid 1px $btn-default-hover;
         }
-        &:active, &:focus {
+        &:active {
             color: $btn-default-active;
             border: solid 1px $btn-default-active;
         }
@@ -82,10 +72,10 @@ body {
         color: $btn-primary-font-color;
         border: $btn-primary-border-color;
         background: $btn-primary-bg-color;
-        &:hover {
+        &:hover, &:focus {
             background: $btn-primary-hover;
         }
-        &:active, &:focus {
+        &:active {
             background: $btn-primary-active;
         }
     }
@@ -94,10 +84,10 @@ body {
         color: $btn-danger-font-color;
         border: $btn-danger-border-color;
         background: $btn-danger-bg-color;
-        &:hover {
+        &:hover, &:focus {
             background: $btn-danger-hover;
         }
-        &:active, &:focus {
+        &:active {
             background: $btn-danger-active;
         }
     }
@@ -106,10 +96,10 @@ body {
         color: $btn-success-font-color;
         border: $btn-success-border-color;
         background: $btn-success-bg-color;
-        &:hover {
+        &:hover, &:focus {
             background: $btn-success-hover;
         }
-        &:active, &:focus {
+        &:active {
             background: $btn-success-active;
         }
     }
@@ -118,10 +108,10 @@ body {
         color: $btn-info-font-color;
         border: $btn-info-border-color;
         background: $btn-info-bg-color;
-        &:hover {
+        &:hover, &:focus {
             background: $btn-info-hover;
         }
-        &:active, &:focus {
+        &:active {
             background: $btn-info-active;
         }
     }
@@ -130,10 +120,10 @@ body {
         color: $btn-warning-font-color;
         border: $btn-warning-border-color;
         background: $btn-warning-bg-color;
-        &:hover {
+        &:hover, &:focus {
             background: $btn-warning-hover;
         }
-        &:active, &:focus {
+        &:active {
             background: $btn-warning-active;
         }
     }
@@ -142,10 +132,10 @@ body {
         color: $btn-link-font-color;
         border: $btn-link-border-color;
         background: $btn-link-bg-color;
-        &:hover {
+        &:hover, &:focus {
             color: $btn-link-hover;
         }
-        &:active, &:focus {
+        &:active {
             color: $btn-link-active;
         }
     }

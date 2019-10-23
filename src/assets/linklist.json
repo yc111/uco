@@ -1,10 +1,1 @@
-[
-    {
-        "text": "Button",
-        "link": ""
-    },
-    {
-        "text": "Tabs",
-        "link": ""
-    }
-]
+[{"text":"button"},{"text":"dialog"},{"text":"tabs"}]

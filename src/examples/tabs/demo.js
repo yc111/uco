@@ -1,8 +1,9 @@
-const Tabs = require('../../components/tabs/tabs');
+// const Tabs = require('../../components/tabs/tabs');
+const {Tabs} = require('../../../dist/lib/uco.min.js');
 
 class Demo {
     render() {
-        return require('./demo.ejs');
+        return require('./demo.pug');
     }
     init() {
         let tab = new Tabs({

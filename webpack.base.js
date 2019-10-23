@@ -14,10 +14,6 @@ let baseConfig = {
     module: {
         rules: [
             {
-                test: /\.js$/,
-                use: ['babel-loader']
-            },
-            {
                 test: /\.(sa|sc|c)ss$/,
                 use: [{
                     loader: MiniCssExtractPlugin.loader,
@@ -27,8 +23,8 @@ let baseConfig = {
                 },'css-loader', 'sass-loader']
             },
             {
-                test: /\.ejs$/,
-                use: ['ejs-loader']
+                test: /\.pug$/,
+                use: ['pug-loader']
             },
             {
                 test: /\.(jpe?g|png|bmp|gif|svg)$/,

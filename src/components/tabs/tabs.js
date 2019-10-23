@@ -41,7 +41,7 @@ class Tabs {
     }
 
     render() {
-        return require('./tabs.ejs')({
+        return require('./tabs.pug')({
             id: this.id,
             ids: this.panelIds,
             list: this.list,

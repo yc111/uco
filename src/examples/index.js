@@ -1,6 +1,8 @@
 require('./index.scss');
 require('../../dist/lib/uco.min.css');
-let x = require('../../dist/lib/uco.min.js');
+
+// const x = require('../../dist/lib/uco.min.js');
+// console.log(x);
 
 $('#sidebar_button').click(function(e) {
     $('#sidebar').toggleClass('sidebar-open');

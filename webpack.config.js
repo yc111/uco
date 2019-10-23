@@ -32,6 +32,14 @@ let docConfig = {
         filename: '[name].js',
         chunkFilename: 'scripts/[id].js?[chunkhash]'
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: ['babel-loader']
+            }
+        ]
+    },
     optimization: {
         splitChunks: {
             cacheGroups: {

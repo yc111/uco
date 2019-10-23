@@ -1,0 +1,33 @@
+div(class="uco-tabs-wrap" id=id)
+    div(class="uco-tabs-bar")
+        div(class="uco-tabs-nav")
+            -
+            each item, index in list
+                - var isActive = selected===index
+                div(class=isActive ? "uco-tabs-tab active" : "uco-tabs-tab") #{item.text}
+        div(class="uco-tabs-active-bar")
+    div(class='uco-tabs-content fadeInRight')
+        -
+        each item, index in ids
+            - var isActive = selected===index
+            div(class=isActive ? "uco-tabs-panel active" : "uco-tabs-panel"  id=item) This is Panel #{index}
+        
+
+
+//- <div class="uco-tabs-wrap" id=<%= id %>>
+//-     <div class="uco-tabs-bar">
+//-         <div class="uco-tabs-nav">
+//-             <% list.forEach((item, index) => { %>
+//-             <div class="uco-tabs-tab <%= selected === index ? 'active' : '' %>"><%= item.text %></div>
+//-             <%})%>
+//-         </div>
+//-         <div class="uco-tabs-active-bar"></div>
+//-     </div>
+//-     <div class='uco-tabs-content fadeInRight'>
+//-         <% ids.forEach((item, index) => { %>
+//-         <div class="uco-tabs-panel <%= selected === index ? 'active' : '' %>" id=<%= item %>>
+//-             <%= `This is Panel ${index}` %>
+//-         </div>
+//-         <%})%>
+//-     </div>
+//- </div>

@@ -1,7 +1,7 @@
 
 class Demo {
     render() {
-        return require('./demo.ejs');
+        return require('./demo.pug');
     }
 }
 

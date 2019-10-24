@@ -6,10 +6,18 @@ let removeTime;
 
 class Message {
     constructor(options) {
+        if(!options || typeof options !== 'object') {
+            throw new Error('new Message should pass options whitch is an object type');
+        }
         this.options = options;
-        this.id = uuidv4();
+        
+        let isElegal = this.options.type !== 'success' && this.options.type !== 'info' && this.options.type !== 'danger' && this.options.type !== 'warning';
+        if(!this.options.type || isElegal) {
+            this.type = "info";
+        }
         this.type = this.options.type;
-        this.text = this.options.text;
+
+        this.text = this.options.text || '';
 
         if(!this.options.time || isNaN(this.options.time) || this.options.time < 0) {
             this.time = defaultTime;
@@ -21,6 +29,7 @@ class Message {
             removeTime = this.time + animationDuration * 2;
         }
 
+        this.id = uuidv4();
         this.init();
     }
     render() {

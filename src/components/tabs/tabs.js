@@ -4,7 +4,7 @@ const uuidv4 = require('uuid/v4');
 class Tabs {
     constructor(options) {
         if (!options || typeof options !== 'object') {
-            throw new Error('new Tabs must pass options whitch is an object type');
+            throw new Error('new Tabs should pass options whitch is an object type');
         }
         this.options = options;
 

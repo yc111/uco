@@ -14,8 +14,8 @@
     position: fixed;
     top: 15%;
     left: 50%;
-    margin-left: -15%;
-    width: 30%;
+    margin-left: -25%;
+    width: 50%;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 0 5px gray;
@@ -69,3 +69,14 @@
     }
 }
 
+
+@media (max-width: 719px) {
+    .uco-dialog-wrapper {
+        margin-left: -40%;
+        width: 80%;
+    }
+
+    .uco-dialog-wrapper .uco-dialog-content {
+        padding: 10px 20px;
+    }
+}

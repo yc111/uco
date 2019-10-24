@@ -1,9 +1,8 @@
 div(class="uco-dialog-wrapper" id=id)
     div(class="uco-dialog-header")
         span(class="uco-dialog-title") 提示
-        span(class="uco-dialog-close" title="关闭")
-    div(class="uco-dialog-content") 
-        span(class="content-text") 内容呈现
+        span(class="uco-dialog-close" title="关闭" id=closeBtnId)
+    div(class="uco-dialog-content content-text" id=contentId) !{content}
     div(class="uco-dialog-footer")
-        button(class="uco-btn default") 取消
-        button(class="uco-btn primary") 确定
+        button(class="uco-btn default" id=cancelId) 取消
+        button(class="uco-btn primary" id=commitId) 确定

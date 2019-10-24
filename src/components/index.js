@@ -1,3 +1,4 @@
+require('./reset.scss');
 require('./button/button.scss');
 require('./button/button.js');
 let Tabs = require('./tabs/tabs.js');

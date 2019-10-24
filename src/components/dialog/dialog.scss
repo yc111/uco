@@ -12,6 +12,7 @@
 
 .uco-dialog-wrapper {
     position: fixed;
+    top: 15%;
     left: 50%;
     margin-left: -15%;
     width: 30%;
@@ -46,8 +47,10 @@
 
     .uco-dialog-content {
         padding: 20px;
+        max-height: 300px;
+        overflow: auto;
         
-        .content-text {
+        &.content-text {
             font-size: 14px;
             color: #606266;
             word-break: break-all;

@@ -3,16 +3,24 @@ const {Dialog} = require('../../../dist/lib/uco.min.js');
 
 class Demo {
     render() {
-        return require('./demo.pug')({
-            id: "test"
-        });
+        return require('./demo.pug')();
     }
 
     init() {
+        let dialog;
+        let content = require('./content.pug')();
         $('#show_dialog').click(function() {
-            new Dialog({
+            dialog = new Dialog({
+                content: content
+            });
+            dialog.onclose(function() {
+                console.log('关闭吧');
+            })
+            dialog.onok(function() {
+                console.log('确定');
             })
         })
+
     }
 }
 

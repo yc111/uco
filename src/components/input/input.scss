@@ -1,0 +1,41 @@
+@import '../../theme/var.scss';
+
+.uco-input {
+    display: inline-block;
+    width: 100%;
+    height: 32px;
+    padding: 4px 7px;
+    font-size: 14px;
+    border: solid 1px #dcdcdc;
+    border-radius: 4px;
+    color: $text;
+    background-color: #fff;
+    position: relative;
+    cursor: text;
+    transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
+
+    &:hover {
+        border-color: $primary;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px rgba(45, 140, 240, .2);
+    }
+}
+
+/* Chrome/Opera/Safari */ 
+::-webkit-input-placeholder{
+    color: #ccc;
+}
+/* Firefox 19+ */
+::-moz-placeholder{
+    color: #ccc;
+}
+/* IE 10+ */
+:-ms-input-placeholder{
+    color: #ccc;
+}
+/* Firefox 18- */
+:-moz-placeholder {
+    color: #ccc;
+}

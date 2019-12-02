@@ -1,4 +1,32 @@
 * {
     margin: 0;
     padding: 0;
+    outline: 0;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: default;
+}
+
+/* Chrome/Opera/Safari */ 
+::-webkit-input-placeholder{
+    color: #ccc;
+}
+/* Firefox 19+ */
+::-moz-placeholder{
+    color: #ccc;
+}
+/* IE 10+ */
+:-ms-input-placeholder{
+    color: #ccc;
+}
+/* Firefox 18- */
+:-moz-placeholder {
+    color: #ccc;
 }

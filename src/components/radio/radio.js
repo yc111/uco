@@ -21,10 +21,14 @@ class Radio {
         let $parent = $('#'+this.el);
         $parent.html(this.render());
         $parent.click((e) => {
-            $parent.find('.uco-radio').addClass('active');
             this.events.onchange.forEach(fn => {
                 fn(this.value);
             })
+        })
+        let $child = $parent.find('.uco-radio');
+        $parent.find('input').click((e) => {
+            e.stopPropagation();
+            $child.addClass('active');
         })
     }
     value() {

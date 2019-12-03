@@ -5,9 +5,13 @@ require('./input/input.scss');
 let Tabs = require('./tabs/tabs.js');
 let Dialog = require('./dialog/dialog.js');
 let Message = require('./message/message.js');
+let Radio = require('./radio/radio.js');
+let Checkbox = require('./checkbox/checkbox.js');
 
 module.exports = {
     Tabs,
     Dialog,
-    Message
+    Message,
+    Radio,
+    Checkbox
 }

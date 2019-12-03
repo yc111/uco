@@ -1,8 +1,5 @@
-
-require('../../components/radio/radio.scss');
-require('./demo.scss');
-
-const Radio = require('../../components/radio/radio.js');
+// const Radio = require('../../components/radio/radio.js');
+const {Radio} = require('../../../dist/lib/uco.min.js');
 
 class Demo {
     render() {

@@ -1,4 +1,5 @@
-const Checkbox = require('../../components/checkbox/checkbox.js');
+// const Checkbox = require('../../components/checkbox/checkbox.js');
+const  {Checkbox}  =  require('../../../dist/lib/uco.min.js');
 
 class Demo {
     render () {

@@ -16,6 +16,9 @@
     &:hover .uco-radio-inner{
         border-color: $primary;
     }
+    &:focus .uco-radio-inner{
+        box-shadow: 0 0 0 2px rgba(45,140,240,.2)
+    }
 
     &.active .uco-radio-inner {
         border-color: $primary;

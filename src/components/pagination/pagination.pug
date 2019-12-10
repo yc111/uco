@@ -1,0 +1,29 @@
+ul(class='uco-pagination')
+  if total <= 10
+    - for(var i = 1; i <= total; i++)
+      - var isActive = i===current
+      li(class= isActive ? 'uco-page-item active' : 'uco-page-item') #{i}
+
+  if total > 10
+      if current < 5
+        - for(var i = 1; i <= 5; i++)
+          - var isActive = i===current
+          li(class= isActive ? 'uco-page-item active' : 'uco-page-item') #{i}
+        li(class= 'uco-page-item-ellipsis') ...
+        li(class= isActive ? 'uco-page-item' : 'uco-page-item') #{total}
+
+      if current >= 5 && current <= total - 5
+        li(class= isActive ? 'uco-page-item' : 'uco-page-item') #{1}
+        li(class= 'uco-page-item-ellipsis') ...
+        - for(var i = current - 2; i <= current + 2; i++)
+          - var isActive = i===current
+          li(class= isActive ? 'uco-page-item active' : 'uco-page-item') #{i}
+        li(class= 'uco-page-item-ellipsis') ...
+        li(class= isActive ? 'uco-page-item' : 'uco-page-item') #{total}
+        
+      if current > total - 5
+        li(class= isActive ? 'uco-page-item' : 'uco-page-item') #{1}
+        li(class= 'uco-page-item-ellipsis') ...
+        - for(var i = total - 5; i <= total; i++)
+          - var isActive = i===current
+          li(class= isActive ? 'uco-page-item active' : 'uco-page-item') #{i}

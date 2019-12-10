@@ -1,0 +1,41 @@
+@import '../../theme/var.scss';
+
+.uco-pagination {
+    width: 100%;
+
+    .uco-page-item {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        margin: 0 8px;
+        border: solid 1px #999;
+        border-radius: 2px;
+        color: $text;
+        text-align: center;
+        line-height: 2;
+        cursor: pointer;
+
+        &.active,
+        &.active:hover {
+            border-color: $primary;
+            background-color: $primary;
+            color: #fff;
+            transition: all .3s;
+        }
+
+        &:hover {
+            border-color: $primary;
+            background-color: #E6F1FF;
+            transition: all .3s;
+        }
+    }
+
+    .uco-page-item-ellipsis {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        line-height: 2;
+        text-align: center;
+        color: $text;
+    }
+}

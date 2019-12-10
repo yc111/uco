@@ -2,17 +2,20 @@
 
 .uco-pagination {
     width: 100%;
+    user-select: none;
+    -moz-user-select: none;
 
     .uco-page-item {
         display: inline-block;
         width: 32px;
         height: 32px;
         margin: 0 8px;
-        border: solid 1px #999;
+        border: solid 1px #dcdee2;
         border-radius: 2px;
         color: $text;
+        font-size: 14px;
         text-align: center;
-        line-height: 2;
+        line-height: 32px;
         cursor: pointer;
 
         &.active,
@@ -34,7 +37,7 @@
         display: inline-block;
         width: 32px;
         height: 32px;
-        line-height: 2;
+        line-height: 32px;
         text-align: center;
         color: $text;
     }
